@@ -18,8 +18,8 @@ RGB-3D anomaly detectors depend on a point-cloud preprocessing stage: background
 
 T-CrossMap treats these settings as **controllable process parameters** and selects them with a **two-stage Taguchi design of experiments** and **grey relational analysis (GRA)**. The selection balances three responses: image-level detection (I-AUROC), defect localisation (AUPRO@30%) and end-to-end latency. The detector, a crossmodal feature mapper (CFM) with frozen DINO ViT-B/8 and Point-MAE encoders, is not modified. Only 36 of the 486 possible configurations are tested.
 
-<p align="center"><img src="assets/fig_problem.png" width="95%"></p>
-<p align="center"><img src="assets/fig_method.jpg" width="95%"></p>
+<p align="center"><img src="fig_problem.png" width="95%"></p>
+<p align="center"><img src="fig_method.jpg" width="95%"></p>
 
 ## Controllable factors
 
@@ -57,7 +57,7 @@ Accuracy values are means of three seeds. Server latency was measured at batch s
 - On the Jetson AGX Orin, T-CrossMap-Fast is **1.94× faster** than the baseline and uses about 8.6 W less module power.
 - All configurations have 113.17 M parameters. The optimum settings need 128.1 GMACs, compared with 130.1 GMACs for the baseline.
 
-<p align="center"><img src="assets/fig_efficiency.png" width="90%"></p>
+<p align="center"><img src="fig_efficiency.png" width="90%"></p>
 
 ### Per-category results (mean of three seeds)
 
@@ -77,7 +77,7 @@ Accuracy values are means of three seeds. Server latency was measured at batch s
 | Offline (A1) | B1 D1 E1 F3 | 0.9390 | 0.9050 ± 0.0062 | 0.8879 |
 | Online (A2) | B2 D1 E1 F3 | 0.9399 | 0.9424 ± 0.0108 | 0.8767 |
 
-<p align="center"><img src="assets/fig_main_effects.png" width="85%"></p>
+<p align="center"><img src="fig_main_effects.png" width="85%"></p>
 
 ## Installation
 
